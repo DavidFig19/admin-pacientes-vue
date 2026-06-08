@@ -16,11 +16,20 @@
   });
 
   const guardarPaciente = () =>{
+
+    if(paciente.id){
+      const {id} = paciente;
+      const i = pacientes.value.findIndex((pacienteState) => pacienteState.id === id)
+      pacientes.value[i] = {...paciente}
+    }else{
+      pacientes.value.push({
+        ...paciente,
+        id:uid()
+      });
+      
+    }
     
-    pacientes.value.push({
-      ...paciente,
-      id:uid()
-    });
+   
     
     // otra forma de reiniciar un objeto
 
@@ -29,7 +38,8 @@
       propietario:'',
       email:'',
       alta:'',
-      sintomas:''
+      sintomas:'',
+      id:null
     })
 
   }
