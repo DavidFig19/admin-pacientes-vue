@@ -14,9 +14,28 @@
   });
 
   const guardarPaciente = () =>{
-    console.log('Agregando...');
-    pacientes.value.push(paciente);
     
+    pacientes.value.push({
+      ...paciente
+    });
+    
+    // Reiniciar el objeto
+    // paciente.nombre = '';
+    // paciente.propietario = '';
+    // paciente.email = ''
+    // paciente.alta = '';
+    // paciente.sintomas = '';
+
+    // otra forma de reiniciar un objeto
+
+    Object.assign(paciente,{
+      nombre:'',
+      propietario:'',
+      email:'',
+      alta:'',
+      sintomas:''
+    })
+
   }
   
 </script>
