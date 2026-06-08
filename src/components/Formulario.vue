@@ -8,7 +8,7 @@
 
     });
 
-    defineEmits(['update:nombre','update:propietario','update:email','update:alta','update:sintomas']);
+    const emit = defineEmits(['update:nombre','update:propietario','update:email','update:alta','update:sintomas','guardar-paciente']);
 
     const props = defineProps({
         nombre:{
@@ -43,7 +43,7 @@
             
         }
 
-        console.log('agregando');
+        emit('guardar-paciente');
         
 
         
