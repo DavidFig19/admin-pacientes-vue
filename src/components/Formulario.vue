@@ -9,6 +9,21 @@
         sintomas:''
     });
 
+    const validar = () => {
+      
+        if(Object.values(paciente).includes('')){
+            console.log('SI estan vacios');
+            return;
+            
+        }
+
+        console.log('agregando');
+        
+
+        
+        
+    }
+
 
 </script>
 
@@ -23,6 +38,7 @@
 
         <form
             class="bg-white shadow-md rounded-lg py-10 px-5 mb-10"
+            @submit.prevent="validar"
         >
             
             <div class="mb-5">
