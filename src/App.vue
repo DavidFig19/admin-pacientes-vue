@@ -19,7 +19,7 @@
 
     if(paciente.id){
       const {id} = paciente;
-      const i = pacientes.value.findIndex((pacienteState) => pacienteState.id === id)
+      const i = pacientes.value.findIndex( paciente => pacienteState.id === id)
       pacientes.value[i] = {...paciente}
     }else{
       pacientes.value.push({
@@ -48,6 +48,11 @@
     const pacienteEditar = pacientes.value.filter(paciente => paciente.id === id)[0];
     Object.assign(paciente, pacienteEditar)
     
+    
+  }
+
+  const eliminarPaciente = (id) => {
+    pacientes.value = pacientes.value.filter(paciente => paciente.id !== id);
     
   }
   
@@ -82,6 +87,7 @@
               v-for="paciente in pacientes"
               :paciente="paciente"
               @actualizar-paciente="actualizarPaciente"
+              @eliminar-paciente="eliminarPaciente"
             />
         </div>
 
