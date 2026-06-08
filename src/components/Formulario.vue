@@ -36,7 +36,7 @@
 </script>
 
 <template>
-    <div class="mt-12 md:w-1/2">
+    <div class="md:w-1/2">
         <h2 class="font-black text-3xl text-center">Seguimiento pacientes</h2>
 
         <p class="text-lg mt-5 text-center mb-10">
