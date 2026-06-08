@@ -40,6 +40,11 @@
         <h3 class="font-black text-3xl text-center">Administra tus Pacientes</h3>
 
         <div v-if="pacientes.length > 0">
+          
+            <p class="text-lg mt-5 text-center mb-10">
+              Informacion de
+              <span class="text-indigo-600 font-bold">Pacientes</span>
+            </p>
             <Paciente
               v-for="paciente in pacientes"
               :paciente="paciente"
